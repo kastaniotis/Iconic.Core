@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Iconic</RootNamespace>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <Copyright>Iconic 2023</Copyright>
+        <PackageProjectUrl>https://github.com/kastaniotis/Iconic.Core</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/kastaniotis/Iconic.Core</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <LangVersion>11</LangVersion>
+        <Version>1.0.4</Version>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="LICENSE.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+</Project>

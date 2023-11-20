@@ -52,35 +52,35 @@ public class Terminal
         Console.ResetColor();
     }
 
-    public static void WriteInYellow(string message){
+    public static void WriteInYellow(string? message){
         WriteInColor(message, ConsoleColor.Yellow, false);
     }
-    public static void WriteLineInYellow(string message){
+    public static void WriteLineInYellow(string? message){
         WriteInColor(message, ConsoleColor.Yellow, true);
     }
 
-    public static void WriteInRed(string message){
+    public static void WriteInRed(string? message){
         WriteInColor(message, ConsoleColor.Red, false);
     }
-    public static void WriteLineInRed(string message){
+    public static void WriteLineInRed(string? message){
         WriteInColor(message, ConsoleColor.Red, true);
     }
     
-    public static void WriteInBlue(string message){
+    public static void WriteInBlue(string? message){
         WriteInColor(message, ConsoleColor.Blue, false);
     }
-    public static void WriteLineInBlue(string message){
-        WriteInColor(message, ConsoleColor.Blue, false);
+    public static void WriteLineInBlue(string? message){
+        WriteInColor(message, ConsoleColor.Blue, true);
     }
     
-    public static void WriteInGreen(string message){
+    public static void WriteInGreen(string? message){
         WriteInColor(message, ConsoleColor.Green, false);
     }
-    public static void WriteLineInGreen(string message){
-        WriteInColor(message, ConsoleColor.Green, false);
+    public static void WriteLineInGreen(string? message){
+        WriteInColor(message, ConsoleColor.Green, true);
     }
     
-    public static void WriteInColor(string message, ConsoleColor color, bool line){
+    public static void WriteInColor(string? message, ConsoleColor color, bool line){
         Console.ForegroundColor = color;
         Console.Write(message);
         if (line) Console.WriteLine();

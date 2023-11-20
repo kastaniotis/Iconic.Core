@@ -31,12 +31,18 @@ public static class Arguments
     }
 
     public static Result<int?> GetIntValueResult(string[] args, string name){
-        var text = GetStringValueResult(args, name).Data;
-        if (TryParse(text, out int i))
+        var res = GetStringValueResult(args, name);
+
+        if (res.Success)
         {
-            return new Result<int?>(true, null, i);
+            if (TryParse(res.Data, out var i))
+            {
+                return new Result<int?>(true, null, i);
+            }
+
+            return new Result<int?>(false, $"You need to specify an int as a value for argument {name}. You provided '{res.Data}'", null);
         }
 
-        return new Result<int?>(false, $"The value for argument {name} should be an integer", null);
+        return new Result<int?>(false, res.Message, null);
     }
 }

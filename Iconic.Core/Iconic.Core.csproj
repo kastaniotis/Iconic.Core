@@ -12,7 +12,7 @@
         <RepositoryUrl>https://github.com/kastaniotis/Iconic.Core</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <LangVersion>12</LangVersion>
-        <Version>1.0.7</Version>
+        <Version>1.0.9</Version>
     </PropertyGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\"/>

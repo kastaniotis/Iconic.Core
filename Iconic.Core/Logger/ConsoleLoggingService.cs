@@ -1,3 +1,5 @@
+using Iconic.Console;
+
 namespace Iconic.Logger;
 
 public class ConsoleLoggingService : ILoggingService
@@ -12,8 +14,8 @@ public class ConsoleLoggingService : ILoggingService
     public void Log(string message, object? context)
     {
         if (!Enabled) return;
-        System.Console.WriteLine(message);
+        Terminal.WriteInBlue($"{message}: ");
         if (null == context) return;
-        System.Console.WriteLine(context.GetType().IsArray ? string.Join(", ", context) : context);
+        Terminal.WriteLineInGreen((context.GetType().IsArray ? string.Join(", ", context) : context).ToString());
     }
 }

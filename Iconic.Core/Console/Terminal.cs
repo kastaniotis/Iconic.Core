@@ -4,7 +4,7 @@ using System;
 public class Terminal
 {
     public static void PrintIntInColor(string title, int data, int yellowThreshold, int greenThreshold, string suffix){
-        Console.Write(title + ":\t\t");
+        Console.Write(title);
         System.Console.ForegroundColor = data switch
         {
             100 => ConsoleColor.Green,
@@ -17,7 +17,7 @@ public class Terminal
     }
 
     public static void PrintBoolInColor(string title, bool data, bool danger, bool reverse){
-        Console.Write(title + ":\t");
+        Console.Write(title);
         if(reverse){
             data = !data;
         }
@@ -36,7 +36,7 @@ public class Terminal
     }
     
     public static void PrintState(string title, string data, string greenValue, string yellowValue, string redValue){
-        Console.Write(title + ":\t");
+        Console.Write(title);
 
         if(data == greenValue){
             Console.ForegroundColor = ConsoleColor.Green;

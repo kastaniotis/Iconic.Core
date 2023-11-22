@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Iconic</RootNamespace>
@@ -11,8 +11,8 @@
         <PackageProjectUrl>https://github.com/kastaniotis/Iconic.Core</PackageProjectUrl>
         <RepositoryUrl>https://github.com/kastaniotis/Iconic.Core</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <LangVersion>11</LangVersion>
-        <Version>1.0.5</Version>
+        <LangVersion>12</LangVersion>
+        <Version>1.0.7</Version>
     </PropertyGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\"/>

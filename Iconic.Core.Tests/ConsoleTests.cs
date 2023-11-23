@@ -24,7 +24,7 @@ public class ConsoleArgsTests
     [Test]
     public void TestGetString()
     {
-        string[] args = { };
+        string[] args = Array.Empty<string>();
 
         Result<string?> test = Arguments.GetStringValueResult(args, "--port");
         Assert.That(test.Success, Is.EqualTo(false));

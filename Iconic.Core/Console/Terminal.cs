@@ -1,10 +1,9 @@
 namespace Iconic.Console;
-using System;
 
-public class Terminal
+public static class Terminal
 {
     public static void PrintIntInColor(string title, int data, int yellowThreshold, int greenThreshold, string suffix){
-        Console.Write(title);
+        System.Console.Write(title);
         System.Console.ForegroundColor = data switch
         {
             100 => ConsoleColor.Green,
@@ -12,44 +11,44 @@ public class Terminal
             _ => ConsoleColor.Red
         };
 
-        Console.Write(data + suffix + "\n");
-        Console.ResetColor();
+        System.Console.Write(data + suffix + "\n");
+        System.Console.ResetColor();
     }
 
     public static void PrintBoolInColor(string title, bool data, bool danger, bool reverse){
-        Console.Write(title);
+        System.Console.Write(title);
         if(reverse){
             data = !data;
         }
         if(data){
-            Console.ForegroundColor = ConsoleColor.Green;
+            System.Console.ForegroundColor = ConsoleColor.Green;
         }
         else
         {
-            Console.ForegroundColor = danger ? ConsoleColor.Red : ConsoleColor.Yellow;
+            System.Console.ForegroundColor = danger ? ConsoleColor.Red : ConsoleColor.Yellow;
         }
         if(reverse){
             data = !data;
         }
-        Console.Write(data + "\n");
-        Console.ResetColor();
+        System.Console.Write(data + "\n");
+        System.Console.ResetColor();
     }
     
     public static void PrintState(string title, string data, string greenValue, string yellowValue, string redValue){
-        Console.Write(title);
+        System.Console.Write(title);
 
         if(data == greenValue){
-            Console.ForegroundColor = ConsoleColor.Green;
+            System.Console.ForegroundColor = ConsoleColor.Green;
         }
         else if(data == yellowValue){
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            System.Console.ForegroundColor = ConsoleColor.Yellow;
         }
         else if(data == redValue) {
-            Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.ForegroundColor = ConsoleColor.Red;
         }
 
-        Console.Write(data + "\n");
-        Console.ResetColor();
+        System.Console.Write(data + "\n");
+        System.Console.ResetColor();
     }
 
     public static void WriteInYellow(string? message){
@@ -81,9 +80,9 @@ public class Terminal
     }
     
     public static void WriteInColor(string? message, ConsoleColor color, bool line){
-        Console.ForegroundColor = color;
-        Console.Write(message);
-        if (line) Console.WriteLine();
-        Console.ResetColor();
+        System.Console.ForegroundColor = color;
+        System.Console.Write(message);
+        if (line) System.Console.WriteLine();
+        System.Console.ResetColor();
     }
 }
